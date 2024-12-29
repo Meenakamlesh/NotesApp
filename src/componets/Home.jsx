@@ -69,15 +69,21 @@ const Home = () => {
 
   return (
     <div className="home bg-white">
-      <div className="home-inside ">
+      <div className="home-inside">
         <input
           type="text"
-          className="home-inputbox bg-transparent border-2 border-black text-black"
+          className="home-inputbox bg-transparent border-2 border-black text-black mb-2"
           placeholder="Enter Title here"
           value={title}
           onChange={(e) => settitle(e.target.value)}
         />
-        <button className="home-btn bg-blue-700 font-bold" onClick={Notes}>
+        <button
+          className="home-btn bg-blue-700 font-bold px-6 py-2 
+                   sm:px-10 sm:py-3 text-sm sm:text-base 
+                   rounded-md transition-all 
+                   duration-300 ease-in-out w-full sm:w-auto"
+          onClick={Notes}
+        >
           {NotesId ? "Update My Notes" : "Create My Notes"}
         </button>
         <div className="flex gap-1 mt-3 ml-3 cursor-pointer">
